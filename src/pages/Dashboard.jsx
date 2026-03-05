@@ -21,7 +21,7 @@ export default function Dashboard({ onNavigate }) {
     return (
         <div className="page-container">
             {/* Header */}
-            <div className="page-header" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+            <div className="page-header" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 'var(--space-md)' }}>
                 <div>
                     <h1>👋 Hello, {user.name}!</h1>
                     <p>Here's your financial overview for {format(new Date(), 'MMMM yyyy')}</p>
@@ -59,7 +59,7 @@ export default function Dashboard({ onNavigate }) {
                         <h3>Welcome to SmartSpend!</h3>
                         <p>Start by adding a transaction, or load demo data to explore the app.</p>
                     </div>
-                    <button className="btn btn-secondary btn-sm" id="load-demo-btn" onClick={seedDemo} style={{ marginLeft: 'auto', flexShrink: 0 }}>
+                    <button className="btn btn-secondary btn-sm insight-banner-btn" id="load-demo-btn" onClick={seedDemo} style={{ marginLeft: 'auto', flexShrink: 0 }}>
                         Load Demo Data
                     </button>
                 </div>
@@ -98,7 +98,7 @@ export default function Dashboard({ onNavigate }) {
             {/* Budget Progress */}
             {budget.monthly > 0 && (
                 <div className="card card-sm" style={{ marginBottom: 'var(--space-xl)' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-sm)' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-sm)', flexWrap: 'wrap', gap: 'var(--space-xs)' }}>
                         <div>
                             <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 15 }}>Monthly Budget</div>
                             <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>
@@ -125,7 +125,7 @@ export default function Dashboard({ onNavigate }) {
 
             {/* Recent Transactions */}
             <div className="card">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-lg)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-lg)', flexWrap: 'wrap', gap: 'var(--space-md)' }}>
                     <div>
                         <div className="chart-title">Recent Transactions</div>
                         <div className="chart-subtitle">Last 5 this month</div>

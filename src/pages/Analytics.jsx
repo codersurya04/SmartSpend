@@ -137,7 +137,7 @@ export default function Analytics() {
             </div>
 
             {/* Charts row */}
-            <div className="chart-section">
+            <div className="chart-section" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-lg)' }}>
                 {/* Pie Chart */}
                 <div className="chart-card">
                     <div className="chart-title">Category Breakdown</div>
@@ -244,7 +244,7 @@ export default function Analytics() {
             <div className="card card-sm" style={{ marginBottom: 'var(--space-lg)' }}>
                 <div className="chart-title">Spending Patterns</div>
                 <div className="chart-subtitle">Key insights from your data</div>
-                <div className="pattern-grid">
+                <div className="pattern-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--space-md)' }}>
                     <div className="pattern-card">
                         <div className="pattern-icon">📅</div>
                         <div>
@@ -279,10 +279,10 @@ export default function Analytics() {
             </div>
 
             {/* Savings Projection */}
-            <div className="chart-card">
+            <div className="chart-card" style={{ marginBottom: 'var(--space-xl)' }}>
                 <div className="chart-title">💰 Savings Projection</div>
                 <div className="chart-subtitle">Based on your current month's trend</div>
-                <div className="projection-grid">
+                <div className="projection-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 'var(--space-md)' }}>
                     <div className="projection-card">
                         <div className="projection-card-label">This Month</div>
                         <div className="projection-card-value" style={{ color: projectedMonthlySavings >= 0 ? 'var(--accent-teal)' : 'var(--accent-red)' }}>

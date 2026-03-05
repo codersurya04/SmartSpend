@@ -63,9 +63,9 @@ export default function TransactionModal({ isOpen, onClose, editData = null }) {
     return (
         <div className="modal-overlay" onClick={(e) => e.target === e.currentTarget && onClose()}>
             <div className="modal">
-                <div className="modal-header">
+                <div className="modal-header" style={{ flexWrap: 'wrap', gap: 'var(--space-sm)' }}>
                     <h2>{isEditing ? '✏️ Edit Transaction' : '➕ Add Transaction'}</h2>
-                    <button className="btn btn-ghost btn-icon" onClick={onClose} id="modal-close-btn">
+                    <button type="button" className="btn btn-ghost btn-icon" onClick={onClose} id="modal-close-btn">
                         <Icon name="close" />
                     </button>
                 </div>
@@ -171,7 +171,7 @@ export default function TransactionModal({ isOpen, onClose, editData = null }) {
                         />
                     </div>
 
-                    <div className="modal-actions">
+                    <div className="modal-actions" style={{ flexWrap: 'wrap' }}>
                         <button type="button" className="btn btn-secondary" onClick={onClose}>
                             Cancel
                         </button>

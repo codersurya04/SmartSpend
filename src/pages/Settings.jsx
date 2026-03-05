@@ -83,7 +83,7 @@ export default function Settings() {
                 <button
                     className={`btn ${showConfirm ? 'btn-danger' : 'btn-secondary'}`}
                     onClick={handleClearData}
-                    style={{ borderColor: !showConfirm ? 'var(--accent-red)' : undefined, color: !showConfirm ? 'var(--accent-red)' : undefined }}
+                    style={{ borderColor: !showConfirm ? 'var(--accent-red)' : undefined, color: !showConfirm ? 'var(--accent-red)' : undefined, flexWrap: 'wrap' }}
                 >
                     <Icon name="trash" />
                     {showConfirm ? 'Click again to confirm delete all' : 'Clear All Data'}

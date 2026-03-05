@@ -91,7 +91,7 @@ export default function Transactions() {
                         className="form-select"
                         value={sortBy}
                         onChange={(e) => setSortBy(e.target.value)}
-                        style={{ width: 'auto', minWidth: 130 }}
+                        style={{ minWidth: 130 }}
                     >
                         {SORT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
                     </select>
@@ -139,7 +139,7 @@ export default function Transactions() {
 
             {/* Transaction List */}
             <div className="card">
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 'var(--space-md)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 'var(--space-md)', flexWrap: 'wrap', gap: 'var(--space-sm)' }}>
                     <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>
                         {filtered.length} transaction{filtered.length !== 1 ? 's' : ''}
                     </span>

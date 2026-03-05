@@ -37,8 +37,8 @@ export default function Budget() {
 
                 <div style={{ background: 'var(--bg-card-hover)', padding: 'var(--space-lg)', borderRadius: 'var(--radius-lg)', marginBottom: 'var(--space-lg)' }}>
                     {isEditing ? (
-                        <div style={{ display: 'flex', gap: 'var(--space-sm)', alignItems: 'center' }}>
-                            <div className="form-group" style={{ marginBottom: 0, flex: 1 }}>
+                        <div style={{ display: 'flex', gap: 'var(--space-sm)', alignItems: 'center', flexWrap: 'wrap' }}>
+                            <div className="form-group" style={{ marginBottom: 0, flex: 1, minWidth: 200 }}>
                                 <div className="input-with-icon">
                                     <span className="input-icon-prefix">{cur}</span>
                                     <input
@@ -56,7 +56,7 @@ export default function Budget() {
                             <button className="btn btn-ghost" onClick={() => { setEditValue(budget.monthly.toString()); setIsEditing(false); }}>Cancel</button>
                         </div>
                     ) : (
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 'var(--space-md)' }}>
                             <div>
                                 <div style={{ fontSize: 32, fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--text-primary)' }}>
                                     {cur}{budget.monthly.toLocaleString()}
@@ -72,7 +72,7 @@ export default function Budget() {
 
                 {budget.monthly > 0 ? (
                     <div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 'var(--space-sm)' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 'var(--space-sm)', flexWrap: 'wrap', gap: 'var(--space-xs)' }}>
                             <span style={{ fontWeight: 600 }}>{cur}{totalExpense.toLocaleString()} spent</span>
                             <span style={{ color: isOver ? 'var(--accent-red)' : 'var(--text-secondary)' }}>
                                 {isOver ? 'Over budget by ' : 'Remaining: '}
